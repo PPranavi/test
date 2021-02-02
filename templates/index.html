@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href={{ url_for('static', filename='style.css') }}/>
+    </head>
+    <body>
+        <header>
+            <h1> {{ name }} </h1>
+            <img src= "{{ image }}"/>
+        </header>
+        <h3> Top 10 Tracks </h3>
+        <ol>
+            {% for i in range(0,len)%}
+                <li>{{ tracks[i] }}</li>
+            {%endfor%}
+        </ol>
+        <h3> Sample </h3>
+        <p> {{track_name}} </p>
+        <img src= "{{ track_image }}"/>
+        <audio src="{{ preview }}" controls></audio>
+    </body>
+</html>
